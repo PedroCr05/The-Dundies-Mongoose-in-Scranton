@@ -1,5 +1,5 @@
 const { Schema } = require(`mongoose`);
-const Employees = require(`./employees`);
+const Employee = require(`./employees`);
 
 const Company = new Schema(
   {
