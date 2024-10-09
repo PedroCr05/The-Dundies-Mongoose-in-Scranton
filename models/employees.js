@@ -1,16 +1,15 @@
-const { ObjectId } = require("bson");
-const { Schema, model } = require(`mongoose`);
+const { Schema } = require(`mongoose`);
 
 const Employee = new Schema(
   {
-    _id: ObjectId(`5e417175c82e0bd7af0f2f04`),
-    company_id: dunderMifflin[0]._id,
-    first_name: `Dwight`,
-    last_name: `Shrute`,
-    email: `DShrute@dm.com`,
-    job_title: `salesman`,
-    salary_in_usd: 65000,
-    address: `4 Beet Rd., Scranton PA 13425`,
+    _id: { type: Schema.Types.ObjectId, ref: `_id` },
+    company_id: { type: Schema.Types.ObjectId, ref: `company_id` },
+    first_name: { type: String, require: true },
+    last_name: { type: String, require: true },
+    email: { type: String, require: true },
+    job_title: { type: String, require: true },
+    salary_in_usd: { type: Number, require: true },
+    address: { type: String, require: true },
   },
   { timestamps: true }
 );

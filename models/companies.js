@@ -3,12 +3,12 @@ const Employee = require(`./employees`);
 
 const Company = new Schema(
   {
-    _id: ObjectId(`70ed7af8f25e417175c82f04`),
-    company_name: `Dunder Mifflin`,
-    location: `Scranton, PA`,
-    product: `paper`,
-    type: `private`,
-    established: 2003,
+    _id: { type: Schema.Types.ObjectId, ref: `_id` },
+    company_name: { type: String, require: true },
+    location: { type: String, require: true },
+    product: { type: String, require: true },
+    type: { type: String, require: true },
+    established: { type: Number, require: true },
   },
   { timestamps: true }
 );
